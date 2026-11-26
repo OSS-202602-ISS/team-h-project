@@ -16,20 +16,18 @@ this file:
 
 ## 1. The tool
 
-- **Name**: \<project name\>
-- **One sentence**: \<what it does, for whom\>
-- **Category**: design / development / management / operations automation / data processing / security
-- **Track**: A only / A + B (keep one)
-  - A = required for every team: a small tool built with whitelist libraries (fill the two blanks)
-  - B = challenge, optional: Track A plus one extension of your own tool
+- **Name**: Student Attendance Checker
+- **One sentence**: Reads a student attendance CSV file and prints a formatted table of students with low attendance for a course instructor.
+- **Category**: data processing
+- **Track**: A only
 
 ## 2. Scope - input, one processing step, output
 
 | | Our project |
 |---|---|
-| **Input** | \<file, values, or API response - be specific\> |
-| **Processing step** | \<the one decision or calculation the tool makes\> |
-| **Output** | \<terminal table / Excel file / log file - what the user sees\> |
+| **Input** | attendance.csv (student_id, name, attended, total, rate) |
+| **Processing step** | filter rows where rate < 80 |
+| **Output** | formatted terminal table and low_attendance.xlsx |
 
 **Definition of done**: one run command, one input, one output result.
 Anything beyond that is track B, not the baseline.
@@ -38,7 +36,9 @@ Anything beyond that is track B, not the baseline.
 
 | Library | Why we need it | On the whitelist? |
 |---|---|---|
-| \<library\> | \<reason\> | yes / ask instructor |
+| pandas | reads the CSV file and filters rows by attendance percentage | yes |
+| rich | formats and prints the filtered results as a clean terminal table | yes |
+| openpyxl | saves the filtered summary to an Excel file | yes |
 
 One row for each library. For example: `| pandas | reads servers.csv | yes |`
 
@@ -50,21 +50,12 @@ Write GitHub usernames (for example @gildong-hong). In a team of two or three,
 one person can take two roles. Roles can rotate later. If roles change, update
 this table.
 
-| Role | Who |
+| Role | GitHub username |
 |---|---|
-| PM | |
-| Developer | |
-| Documentation | |
-| Reviewer | |
-
-## 5. Schedule
-
-| Chapter | What we finish |
-|---|---|
-| 11 | Repository set up, plan written, 3 issues opened, first feature branch |
-| 12 | Core feature works end to end (the two blanks are filled) |
-| 13 | Peer review, error handling, documentation complete, tests pass |
-| Final submission | Final tag, "My contribution" written, peer evaluation done |
+| PM | @yonzanbibek |
+| Developer | @rajivtmg-source |
+| Documentation | @vaxo56735-ai |
+| Reviewer | @chaudharyarbin17-creator |
 
 ## 6. Risks
 
